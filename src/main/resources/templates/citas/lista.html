@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layout/base :: plantilla(~{::title}, ~{::main})}">
+<head>
+    <title>Citas | Patitas Felices</title>
+</head>
+<body>
+<main class="container pt-4">
+    <h2 class="titulo-pagina">Citas programadas</h2>
+
+    <div class="tabla-clinica table-responsive">
+        <table class="table table-hover align-middle mb-0">
+            <thead>
+            <tr>
+                <th>Mascota</th>
+                <th>Propietario</th>
+                <th>Fecha</th>
+                <th>Servicio</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="cita : ${listaCitas}">
+                <td class="fw-semibold"><i class="bi bi-paw me-2 text-secondary"></i><span th:text="${cita.nombreMascota}">Mascota</span></td>
+                <td th:text="${cita.nombrePropietario}">Propietario</td>
+                <td th:text="${#temporals.format(cita.fecha, 'dd/MM/yyyy')}">01/01/2026</td>
+                <td><span class="badge insignia-tipo" th:text="${cita.servicio.nombre}">Servicio</span></td>
+            </tr>
+            <tr th:if="${#lists.isEmpty(listaCitas)}">
+                <td colspan="4" class="text-center text-muted py-4">No hay citas programadas por ahora.</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+</body>
+</html>

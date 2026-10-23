@@ -1,0 +1,117 @@
+:root {
+    --verde-profundo: #0b4f4a;
+    --verde-clinica: #17877d;
+    --menta: #e3f4ef;
+    --sol: #ffc233;
+    --sol-oscuro: #e5a60f;
+    --coral: #ef6f5e;
+    --tinta: #1d2f2e;
+    --fondo: #f3f9f7;
+}
+
+body {
+    font-family: 'Nunito', system-ui, sans-serif;
+    color: var(--tinta);
+    background: var(--fondo);
+}
+
+h1, h2, h3, h4, .navbar-brand, .btn {
+    font-family: 'Fredoka', 'Nunito', sans-serif;
+}
+
+/* Encabezado */
+.encabezado-clinica {
+    background: var(--verde-profundo);
+    color: #fff;
+}
+.encabezado-logo {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--sol);
+    color: var(--verde-profundo);
+    font-size: 1.7rem;
+}
+.encabezado-titulo { font-size: 1.7rem; font-weight: 700; }
+.encabezado-eslogan { color: #bfe6df; font-size: .95rem; }
+
+/* Navbar */
+.barra-clinica { background: var(--verde-clinica); padding: 0; }
+.barra-clinica .nav-link {
+    color: #eafaf6;
+    font-weight: 600;
+    padding: .9rem 1.1rem;
+    border-bottom: 3px solid transparent;
+}
+.barra-clinica .nav-link:hover { color: #fff; border-bottom-color: rgba(255, 255, 255, .5); }
+.barra-clinica .nav-link.active { color: #fff; border-bottom-color: var(--sol); }
+
+/* Hero */
+.hero-campana {
+    background: linear-gradient(135deg, var(--verde-profundo), var(--verde-clinica));
+    color: #fff;
+    padding: 4rem 0;
+}
+.etiqueta-mes { background: var(--sol); color: var(--verde-profundo); font-size: .95rem; padding: .5rem .8rem; }
+.hero-titulo { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 700; line-height: 1.05; }
+.hero-texto { font-size: 1.15rem; max-width: 40rem; margin-bottom: 1.5rem; }
+.tarjeta-campana {
+    background: #fff;
+    color: var(--tinta);
+    border-radius: 1.25rem;
+    padding: 1.75rem;
+    border-left: 8px solid var(--sol);
+}
+.tarjeta-campana li { padding: .35rem 0; }
+.tarjeta-campana i { color: var(--verde-clinica); }
+
+/* Botones */
+.btn-sol { background: var(--sol); color: var(--verde-profundo); border: none; }
+.btn-sol:hover { background: var(--sol-oscuro); color: var(--verde-profundo); }
+.btn-clinica { background: var(--verde-clinica); color: #fff; border: none; }
+.btn-clinica:hover { background: var(--verde-profundo); color: #fff; }
+.btn:focus-visible, .nav-link:focus-visible, .form-control:focus, .form-select:focus {
+    outline: 3px solid var(--sol);
+    outline-offset: 2px;
+    box-shadow: none;
+}
+
+/* Secciones */
+.seccion-info { margin-top: 3.5rem; }
+.titulo-seccion { font-size: 1.9rem; font-weight: 600; color: var(--verde-profundo); margin-bottom: 1.5rem; }
+.titulo-pagina { font-size: 1.9rem; font-weight: 600; color: var(--verde-profundo); margin-bottom: 1.25rem; }
+.bloque-info {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border-top: 5px solid var(--verde-clinica);
+}
+.bloque-info i { font-size: 2rem; color: var(--coral); }
+.marco-video { border-radius: 1.25rem; overflow: hidden; box-shadow: 0 .5rem 1.5rem rgba(11, 79, 74, .2); max-width: 900px; margin: 0 auto; }
+
+/* Formularios y tablas */
+.formulario-clinica {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.75rem;
+    box-shadow: 0 .25rem 1rem rgba(11, 79, 74, .1);
+}
+.form-label { font-weight: 700; color: var(--verde-profundo); }
+.tabla-clinica {
+    background: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 .25rem 1rem rgba(11, 79, 74, .1);
+}
+.tabla-clinica thead th { background: var(--menta); color: var(--verde-profundo); border-bottom: 2px solid var(--verde-clinica); }
+.insignia-cantidad { background: var(--verde-clinica); font-size: .95rem; min-width: 2.2rem; }
+.insignia-tipo { background: var(--menta); color: var(--verde-profundo); font-weight: 700; }
+
+/* Footer */
+.pie-clinica { background: var(--verde-profundo); color: #d6efe9; }
+
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+}
